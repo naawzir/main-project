@@ -1,0 +1,96 @@
+{
+  "name": "isg/the-conveyancing-partnership",
+  "description": "The Conveyancing Partnership",
+  "keywords": [
+    "isg",
+    "app",
+    "tcp"
+  ],
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": ">=7.1.0",
+    "ext-calendar": "*",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "academe/idealpostcodes": "^0.9.1",
+    "aws/aws-sdk-php": "^3.74",
+    "doctrine/dbal": "^2.8",
+    "fideloper/proxy": "^4.0",
+    "guzzlehttp/guzzle": "^6.3",
+    "laravel/framework": "5.6.*",
+    "laravel/tinker": "~1.0",
+    "league/flysystem-aws-s3-v3": "^1.0",
+    "league/flysystem-cached-adapter": "~1.0",
+    "maatwebsite/excel": "^3.1",
+    "mirzabusatlic/laravel-schedule-monitor": "^1.02",
+    "nessworthy/textmarketer": "^1.0",
+    "nothingworks/blade-svg": "^0.2.2",
+    "owen-it/laravel-auditing": "^7.0",
+    "spatie/laravel-view-models": "^1.1",
+    "webpatser/laravel-uuid": "^3.0",
+    "yajra/laravel-datatables": "^1.0"
+  },
+  "require-dev": {
+    "filp/whoops": "~2.0",
+    "fzaninotto/faker": "^1.8",
+    "iamproperty/tcp-faker": "^1.0",
+    "jakub-onderka/php-parallel-lint": "dev-master",
+    "laravel/browser-kit-testing": "^4.1",
+    "mockery/mockery": "~1.0",
+    "phpmd/phpmd": "^2.6",
+    "phpunit/phpunit": "^7.0",
+    "roave/security-advisories": "dev-master",
+    "squizlabs/php_codesniffer": "^3.3"
+  },
+  "autoload": {
+    "classmap": [
+      "database/seeds",
+      "database/factories"
+    ],
+    "psr-4": {
+      "App\\": "app/"
+    },
+    "files": [
+      "app/Helpers/Helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": [
+      ]
+    }
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php artisan key:generate"
+    ],
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover"
+    ]
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/Nessworthy/PHP-Parallel-Lint"
+    },
+    {
+      "type": "composer",
+      "url": "https://packages.iamproperty.com"
+    }
+  ]
+}

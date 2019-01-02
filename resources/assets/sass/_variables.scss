@@ -1,0 +1,79 @@
+
+// Body
+$body-bg: #f5f5f5;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border: $laravel-border-color;
+$navbar-default-border: $laravel-border-color;
+$panel-default-border: $laravel-border-color;
+$panel-inner-border: $laravel-border-color;
+
+// Brands
+$brand-primary: #3097d1;
+$brand-info: #8eb4cb;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger: #bf5329;
+
+// Design Colors
+$action: #e3bb4b;
+$alert: #d47f38;
+
+$primary: #e3bb4b; // replace the above?
+$primary-light: lighten($primary, 5%);
+$primary-dark: #d47f38;
+
+$success: #b7c582;
+$dark-gray: #4a4a4a;
+$darker-gray: #3a434c;
+$darkest-gray: #2f2f2f;
+$warning: #de7163;
+// Other Colors
+$secondary: #2fb0bf;
+$secondary-light: #73d2dd;
+$alert-neg: #f1a9aa;
+$light-gray: #fafafa;
+$medium-gray: #bebebe;
+$accent-gray: #e6e6e6;
+$table-gray-light: #f5f5f5;
+$table-gray-dark: #e0e0e0;
+$header-gray: #747474;
+$small-header-gray: #bdbdbd;
+$font-gray: #212121;
+$black: #0a0a0a;
+$white: #fff;
+$primary-very-light: #fbf1ea;
+$view-more-less: #359dc5;
+$red: #f00;
+$orange: #ffa500;
+$lightblue: #83cbcc;
+$lightred: #e6a198;
+$black: #000000;
+
+// Typography
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$font-family-sans-serif: 'Montserrat', sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.6;
+$text-color: #636b6f;
+
+// Navbar
+$navbar-default-bg: #fff;
+
+// Buttons
+$btn-default-color: $text-color;
+
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+// Panels
+$panel-default-heading-bg: #fff;
+
+// grid size
+$grid-columns: 24 !default;
+$grid-gutter-width: 0 !default;
+
+$bold: bold;

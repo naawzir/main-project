@@ -1,0 +1,74 @@
+.alert-box {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+  padding: 4px;
+  width: 90%;
+}
+
+.alert-box p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  color: $white;
+}
+
+.success-box,
+.warning-box {
+  margin-left: 2%;
+  margin-bottom: 1%;
+  cursor: pointer;
+}
+
+.warning-box {
+  background-color: lighten(#f3d0cb, 5%);
+  border: 2px solid #de7163;
+}
+
+.success-box {
+  background-color: lighten(#b7c582, 27%);
+  border: 2px solid #b7c582;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+  width: 90%;
+}
+
+.success-box p,
+.warning-box p {
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  line-height: 20px;
+}
+
+.warning-box p,
+.warning-box::before {
+  color: darken(#de7163, 20%);
+}
+
+.warning-box::before {
+  line-height: 15px;
+}
+
+.warning-box p::before {
+  content: url('../../../public/img/icons/notification.png');
+  margin-right: 1%;
+  vertical-align: -15%;
+}
+
+.notification {
+  float: right;
+  margin-right: 10px;
+}
+
+.success-box p,
+.success-box::before {
+  color: darken(#b7c582, 20%);
+}
+
+.success-box p::before {
+  content: url('../../../public/img/icons/positive-notification.png');
+  margin-right: 1%;
+  vertical-align: -15%;
+}

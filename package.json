@@ -1,0 +1,53 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "development-ci": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "lint": "./node_modules/eslint/bin/eslint.js ./resources/js",
+        "lint-ci": "./node_modules/eslint/bin/eslint.js -o ./report/eslint-junit.xml -f junit ./resources/js",
+        "lint-fix": "./node_modules/eslint/bin/eslint.js ./resources/js --fix",
+        "test": "./node_modules/.bin/mocha --compilers @babel/register --timeout 120000 tests/javascript/**/*.test.js",
+        "test-ci": "MOCHA_FILE=./report/mocah-junit.xml ./node_modules/.bin/mocha --reporter mocha-junit-reporter --compilers @babel/register --no-deprecation --exit --timeout 120000 tests/javascript/**/*.test.js"
+    },
+    "devDependencies": {
+        "@babel/helper-explode-assignable-expression": "^7.1.0",
+        "@babel/preset-env": "^7.2.0",
+        "@babel/register": "^7.0.0",
+        "browser-sync": "^2.26.3",
+        "chai": "^4.2.0",
+        "cross-env": "^5.2.0",
+        "eslint": "^4.11.0",
+        "eslint-config-airbnb": "^16.1.0",
+        "eslint-plugin-import": "^2.14.0",
+        "eslint-plugin-jsx-a11y": "^6.1.2",
+        "eslint-plugin-mocha": "^4.11.0",
+        "eslint-plugin-react": "^7.11.1",
+        "laravel-mix": "^4.0.0",
+        "mocha": "^4.0.1",
+        "mocha-junit-reporter": "^1.18.0",
+        "nightmare": "^3.0.1",
+        "popper.js": "^1.14.6",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.15.2",
+        "sass-loader": "^7.1.0",
+        "vue": "^2.5.21",
+        "xvfb": "^0.2.3"
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "bootstrap": "^4.1.3",
+        "imagemin": "^6.0.0",
+        "img-loader": "^3.0.0",
+        "jquery": "^3.3.1",
+        "jquery-confirm": "^3.3.2",
+        "lodash": "^4.17.11",
+        "moment": "^2.23.0",
+        "vue-rangedate-picker": "^0.3.4"
+    }
+}

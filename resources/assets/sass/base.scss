@@ -1,0 +1,602 @@
+h5 {
+  margin-left: 1%;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: $medium-gray;
+  max-width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+button a {
+  color: $white;
+  text-transform: uppercase;
+}
+
+// Removes the number spinners
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+// From https://stackoverflow.com/a/4298216/3935089
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  // display: none; <- Crashes Chrome on hover
+  -webkit-appearance: none;
+  margin: 0; // <-- Apparently some margin are still there even though it's hidden
+}
+
+input[type="file"],
+input[type="image"] {
+  border: 0;
+  padding: 0;
+
+  &::-webkit-file-upload-button {
+    padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
+  }
+}
+
+legend {
+  font-size: inherit !important;
+}
+// Removes the number spinners
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+// From https://stackoverflow.com/a/4298216/3935089
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  // display: none; <- Crashes Chrome on hover
+  -webkit-appearance: none;
+  margin: 0; // <-- Apparently some margin are still there even though it's hidden
+}
+
+legend {
+  font-size: inherit !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.window {
+  background-color: $body-bg;
+  padding: 0 10px 10px 10px;
+}
+
+.window h1 {
+  color: $darker-gray;
+  margin-left: 2%;
+}
+
+#added-content-area,
+#content-area, .extra-content {
+  margin-left: 2%;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $darker-gray;
+}
+
+.center {
+  text-align: center;
+}
+
+.alert-font {
+  color: $alert;
+}
+
+.warning {
+  background-color: $warning;
+}
+
+.warning-font {
+  color: $warning;
+}
+
+.success {
+  background-color: $success;
+}
+
+.success-font {
+  color: $success;
+}
+
+.primary {
+  background-color: $primary;
+}
+
+.primary-font {
+  color: $primary;
+}
+
+.primary-dark {
+  background-color: $primary-dark;
+}
+
+.primary-dark-font {
+  color: $primary-dark;
+}
+
+.darker-grey {
+  background-color: $darker-gray;
+}
+
+.darker-grey-font {
+  color: $darker-gray;
+}
+
+.success-button {
+  background-color: $success;
+  color: $white;
+  border: solid 2px $success;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.success-button a {
+  text-decoration: none;
+  text-align: center;
+  text-transform: none;
+}
+
+.success-button a:hover, .success-button:hover a {
+  color: $success;
+}
+
+.success-button:hover {
+  background-color: $white;
+  color: $success;
+  border: solid 2px $success;
+  text-decoration: none;
+}
+
+.success-invert {
+  display: block;
+  background-color: $white;
+  color: $success;
+  border: solid 2px $success;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.success-invert:hover {
+  color: $white;
+  background-color: $success;
+}
+
+.cancel-button {
+  background-color: $brand-danger;
+  color: $white;
+  border: solid 2px $brand-danger;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel-button a {
+  text-decoration: none;
+  text-align: center;
+  text-transform: none;
+}
+
+.cancel-button a:hover,
+.cancel-button:hover a {
+  color: $brand-danger;
+}
+
+.cancel-button:hover {
+  background-color: $white;
+  color: $brand-danger;
+  border: solid 2px $brand-danger;
+  text-decoration: none;
+}
+
+.clean-panel,
+.panel {
+  float: left;
+  background-color: $white;
+  padding-top: 15px;
+  box-shadow: 2px 2px $accent-gray;
+  margin-bottom: 1%;
+  border-left: 1px solid $accent-gray;
+  border-right: 1px solid $accent-gray;
+  border-bottom: 1px solid $accent-gray;
+}
+
+.panel {
+  border-top: 6px solid $alert;
+}
+
+aside .not-full {
+  padding: 5px;
+}
+
+aside .row {
+  margin: 5% 5% 5% 5%;
+}
+
+.grouped {
+  padding: 3px;
+  border: solid 1px $medium-gray;
+}
+
+.grouped p {
+  font-size: 0.8rem;
+}
+
+.grouped span {
+  font-weight: bold;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  display: inline-block;
+}
+
+nav .breadcrumb {
+  background-color: $white;
+}
+
+nav .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  content: ">>";
+}
+
+$breadcrumbs-item-color: $dark-gray;
+
+.breadcrumb {
+  font-size: 0.825rem;
+}
+
+.breadcrumb a {
+  color: inherit;
+
+  &:focus,
+  &:hover {
+    color: inherit;
+  }
+}
+
+.callout-info {
+  padding: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.notification-circle {
+  float: none;
+  width: 119.5px;
+  height: 119.5px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+.notification-circle span {
+  text-align: center;
+  color: $white;
+  font-size: 1.9rem;
+  text-anchor: middle;
+  font-weight: bold;
+}
+
+.notification-circle p {
+  text-align: center;
+  color: $white;
+  font-size: 0.9rem;
+  padding-top: 40px;
+  line-height: 18px;
+}
+
+.bar {
+  float: left;
+  height: 30px;
+  border: 1px solid $white;
+  padding: 4px;
+  text-align: right;
+  color: $white;
+}
+
+.left-col:not(:first-child) {
+  border-left: 2px solid $medium-gray;
+}
+
+.data-row p {
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+
+.data-row p a {
+  text-decoration: none;
+  color: $darker-gray;
+  vertical-align: middle;
+  line-height: 3em;
+  padding: 0 2%;
+  display: block;
+}
+
+.data-row span {
+  float: right;
+}
+
+.data-row:nth-of-type(odd) {
+  background: $accent-gray;
+}
+
+.dr-figure {
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+
+.fake-header {
+  background-color: #0f4f54;
+  color: $white;
+  height: 5%;
+}
+
+.fake-header h1 {
+  font-weight: bolder;
+  text-align: center;
+  padding: 3px;
+}
+
+#added-content-area .datepicker,
+#content-area .datepicker {
+  border-radius: 5px;
+  border: 2px solid $medium-gray;
+  padding: 5px;
+  color: $medium-gray;
+  background-image: url('../../../public/img/icons/calendar-alt.svg');
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  text-align: center;
+}
+
+#added-content-area .datepicker::placeholder,
+#content-area .datepicker::placeholder {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.ui-datepicker-week-end .ui-state-default,
+.ui-datepicker-week-end span {
+  color: $red;
+}
+
+#content-area input,
+#content-area textarea,
+#content-area button,
+#content-area select {
+  margin-right: 1%;
+}
+
+#content-area select {
+  padding: 3px;
+  border: solid 2px $medium-gray;
+  border-radius: 3px;
+  color: $medium-gray;
+  font-style: italic;
+  margin-right: 1%;
+}
+
+div.dt-buttons {
+  float: right !important;
+}
+
+.caseReminderGreen {
+  font-weight: bold;
+  color: #56bebf;
+}
+
+.caseReminderYellow {
+  font-weight: bold;
+  color: #e3b33d;
+}
+
+.caseReminderRed {
+  font-weight: bold;
+  color: #de7163;
+}
+
+.branchReminderBlack {
+  font-weight: bold;
+  color: #000000;
+}
+
+#page-header h1,
+#page-header h6 {
+  display: inline;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $dark-gray;
+  z-index: 50;
+  opacity: 0.4;
+  display: none;
+}
+
+table button {
+  width: 100%;
+  min-width: 25%;
+  float: right;
+  margin-left: 10px;
+}
+
+.dataTables_length label {
+  width: 200px;
+}
+
+.colorbox {
+  width: 20px;
+  height: 20px;
+}
+
+.lightblue-color {
+  color: $lightblue;
+  font-weight: bold;
+}
+
+.lightred-color {
+  color: $lightred;
+  font-weight: bold;
+}
+
+.orange-color {
+  color: $orange;
+  font-weight: bold;
+}
+
+.light-green {
+  color: $brand-success;
+  font-weight: bold;
+}
+
+.btn-rating {
+  display: inline-block;
+  line-height: 60px;
+  border: 2px solid #e8e8e9;
+  margin-right: 4px;
+  text-align: center;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+
+  [type='radio'] {
+    display: none;
+  }
+}
+
+.logoimg {
+  width: 200px;
+  height: 200px;
+}
+
+.bold-link {
+  color: $view-more-less;
+  font-weight: bold;
+}
+
+.bold-link:hover {
+  color: $lightblue;
+  font-weight: bold;
+}
+
+/* Nicer Checkboxes */
+.cbContainer {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cbContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border: black 1px solid;
+}
+
+.cbContainer:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.cbContainer input:checked ~ .checkmark {
+  background-color: $primary-dark;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.cbContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.cbContainer .checkmark:after {
+  left: 9px;
+  top: 2px;
+  width: 5px;
+  height: 20px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  font-family: 'Roboto', sans-serif;
+}
+
+.table thead th.first {
+  vertical-align: top;
+}
+
+.download-button-red {
+  color: #850000;
+}
+
+.download-button-red:hover {
+  color: #b53626;
+}
+
+.info-message-round {
+  text-align: center;
+  background-color: #fde396;
+  border-radius: 45px;
+}

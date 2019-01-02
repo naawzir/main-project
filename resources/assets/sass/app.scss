@@ -1,0 +1,45 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
+
+// Variables
+@import "variables";
+// Settings MUST be imported before Bootstrap to modify it as it is compiled
+@import "settings";
+// Bootstrap MUST be imported towards the top of the file to allow easy modification
+@import '~bootstrap/scss/bootstrap';
+// Libraries
+@import "vendor_css/jquery.dataTables.min"; // Data Tables
+@import "vendor_css/multi-select"; // Multi Select
+@import "alerts";
+@import "authentication-forms";
+@import "base";
+@import "case_form";
+@import "case_listing";
+@import "charts";
+@import "navigation";
+@import "table-elements";
+@import "staff-performance";
+@import "vendors";
+@import "branch_performance";
+@import "tasks.scss";
+@import "solicitor.scss";
+@import "feedback-form.scss";
+@import "SelectionGroup";
+@import "Panel";
+@import "Feedback";
+
+.SelectionGroup {
+  @include selection-group-theme($primary-dark, white, $primary-dark, transparent);
+}
+
+.SelectionGroup__control:checked + .SelectionGroup__button {
+  font-weight: bolder;
+}
+
+.Panel--decorated {
+  @include panel-decoration($primary-dark);
+}
+
+.Panel--highlighted {
+  @include panel-highlight($primary-dark, white);
+}

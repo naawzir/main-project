@@ -1,0 +1,54 @@
+$panel-background: #FFF !default;
+$panel-decoration-color: $medium-gray !default;
+$panel-padding: 1rem !default;
+
+@mixin panel-decoration($highlight: $panel-decoration-color) {
+  border-color: $highlight;
+}
+
+@mixin panel-highlight($highlight: $panel-decoration-color, $color: $white) {
+  border-color: $highlight;
+
+  .Panel__header {
+    background-color: $highlight;
+    color: $color;
+  }
+}
+
+.Panel {
+  background-color: $panel-background;
+  box-shadow: rgba(0,0,0, 0.30) 0 2px 4px;
+}
+
+.Panel--decorated {
+  border-top: 6px solid $panel-decoration-color;
+}
+
+.Panel--flat {
+  border: 1px solid $accent-gray;
+  box-shadow: none;
+}
+
+.Panel--highlighted {
+  border: 2px solid $panel-decoration-color;
+  border-radius: 5px;
+}
+
+.Panel__body {
+  padding: $panel-padding;
+}
+
+.Panel__header {
+  background-color: $panel-decoration-color;
+}
+
+.Panel__title {
+  color: inherit;
+  font-size: $h5-font-size;
+  margin: 0;
+  padding: $panel-padding;
+}
+
+.Panel + .Panel {
+  margin-top: 1rem;
+}

@@ -1,0 +1,92 @@
+/* CSS for Branch Performance Page */
+.instructions-kpi {
+
+  background-color: $primary-dark;
+
+}
+
+.kpi {
+  cursor: pointer;
+}
+
+.kpi-empty {
+  cursor: default;
+}
+
+.kpi:hover {
+  text-decoration: none;
+}
+
+.riskSuccess {
+  font-weight: bold;
+  color: $success;
+}
+
+.riskWarning {
+  font-weight: bold;
+  color: $warning;
+}
+
+#branchesTable tr th:nth-child(1) {
+  width: 220px;
+}
+
+#branchesTable tr th:not(:first-child) {
+  text-align: center;
+}
+
+#branchesTable tr td:not(:first-child) {
+  text-align: center;
+}
+
+.view_more,
+.view_less {
+  color: $view-more-less;
+  cursor: pointer;
+}
+
+.view_more:hover,
+.view_less:hover {
+  color: darken($view-more-less, 20%);
+  cursor: pointer;
+}
+
+.editable {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*.monthly_targets_table tr {
+
+  background-color: $white;
+
+}*/
+
+.monthly_targets_table tr:nth-child(even) {
+  background-color: $white;
+}
+
+.monthly_targets_table tr:nth-child(odd) {
+  background-color: $white;
+}
+
+#branchesTable tr th {
+  width: 70px;
+}
+
+.target_updated {
+  font-size: 20px;
+}
+
+/*
+#monthlyTargetsTable tr:nth-child(even) {
+
+  background-color: $white;
+
+}
+
+#monthlyTargetsTable tr:nth-child(odd) {
+
+  background-color: $white;
+
+}*/

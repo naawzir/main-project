@@ -1,0 +1,134 @@
+/* #Navigation menu styling file
+
+ Left hand aligned Menu
+ */
+
+#navigation {
+  background-color: $dark-gray;
+  position: relative;
+}
+
+.navigation-name {
+  margin-top: 1.5rem;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.navigation {
+  background-color: $dark-gray;
+  background-image: url('/images/tcp-logo.png');
+  background-position: center 1rem;
+  background-repeat: no-repeat;
+  background-size: 4.5rem;
+  color: $white;
+  font-weight: bold;
+  list-style-type: none;
+  padding-left: 0;
+  padding-top: 6rem;
+}
+
+.navigation__item {
+  width: 100%;
+}
+
+.navigation__item + .navigation__item {
+  margin-top: 0.25rem;
+}
+
+.navigation__item--with-submenu + .navigation__item {
+  margin-top: 0;
+}
+
+.navigation__link {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 1.5rem;
+
+  &:hover,
+  &:focus {
+    background-color: $action;
+    color: $dark-gray;
+    text-decoration: none;
+  }
+}
+
+.navigation__icon {
+  font-size: 150%;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.navigation__icon_no_size {
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.menu {
+  position: relative;
+}
+
+.navigation .navigation {
+  background-color: $darkest-gray;
+  background-image: none;
+  font-weight: normal;
+  padding-top: 1rem;
+  position: relative;
+
+  .navigation__link {
+    padding: 0.25rem 0 0.25rem 2rem;
+  }
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 16px solid $dark-gray;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+  }
+}
+
+.sub-menu a {
+  padding-left: 14%;
+  padding-top: 8%;
+}
+
+.special {
+  position: relative;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 16px solid $dark-gray;
+  z-index: 25;
+  position: absolute;
+  top: 72px;
+  left: 19px;
+}
+
+// inheritance needs sorting out
+.nav-item a {
+  font-weight: bolder;
+  color: $medium-gray;
+}
+
+.nav-tabs .nav-item .nav-link {
+  background-color: $light-gray;
+  border-top: 6px solid $medium-gray;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+  background-color: $white;
+  border-top: 6px solid $alert;
+}

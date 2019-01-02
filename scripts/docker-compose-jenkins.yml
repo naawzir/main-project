@@ -1,0 +1,22 @@
+version: '3'
+services:
+  webserver:
+    image: 135587954537.dkr.ecr.eu-west-1.amazonaws.com/isg-tcp-laravel:1.1.10
+    container_name: webserver
+    ports:
+      - "80:80"
+      - "3306:3306"
+      - "443:443"
+    volumes:
+      - "../:/data/srv/nginx/laravel.tcp-ltd.co.uk/site"
+      - node_other:/data/srv/nginx/laravel.tcp-ltd.co.uk/.npm
+      - node_modules:/data/srv/nginx/laravel.tcp-ltd.co.uk/site/node_modules
+      - composer_packages:/data/srv/nginx/laravel.tcp-ltd.co.uk/site/vendor
+      - storage:/data/srv/nginx/laravel.tcp-ltd.co.uk/site/storage/logs
+    stdin_open: true
+    tty: true
+volumes:
+  node_modules:
+  node_other:
+  composer_packages:
+  storage:

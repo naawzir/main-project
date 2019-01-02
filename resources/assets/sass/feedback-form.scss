@@ -1,0 +1,30 @@
+#monthlyFeedbackHeaderSection #monthlyFeedbackHeaderImage {
+  width: 100%;
+  filter: brightness(50%);
+  height: 300px;
+}
+
+#monthlyFeedbackHeaderSection #header {
+  font-size: 20px;
+  position: absolute;
+  top: 40px;
+  color: #fff;
+  left: 20px;
+}
+
+#monthlyFeedbackHeaderSection #mainText {
+  font-size: 42px;
+  font-weight: bold;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  color: #fff;
+}
+
+#monthlyFeedbackHeaderSection #lastText {
+  font-size: 12px;
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  color: #fff;
+}

@@ -1,0 +1,32 @@
+// css for charts
+
+// donut chart
+
+svg,
+#prospects-notification {
+  display: block;
+  margin: 0 auto;
+}
+
+svg {
+  height: 158px;
+  width: 158px;
+}
+
+#prospects-notification {
+  height: 90px;
+  width: 90px;
+}
+
+.chart-text {
+  font-size: 0.2rem;
+  transform: translateY(0.25em);
+}
+
+.chart-number {
+  font-size: 0.6rem;
+  font-weight: bold;
+  line-height: 1;
+  text-anchor: middle;
+  transform: translateY(-0.15em);
+}

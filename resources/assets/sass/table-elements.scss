@@ -1,0 +1,60 @@
+/*Table settings file*/
+// caption{
+
+// 	background-color: $white;
+// 	text-transform: uppercase;
+// 	color: $black;
+// 	padding: 8px;
+// 	text-align: left;
+// }
+
+table tr:nth-of-type(even) {
+  background-color: $table-gray-dark;
+}
+
+table tr:nth-of-type(odd) {
+  background-color: $white;
+}
+
+th {
+  background-color: $table-gray-dark;
+  color: $black;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.action-field {
+  background-color: $action;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+// dataTables stuff
+
+.panel-body table.dataTable thead th,
+.panel-body table.dataTable thead td,
+.panel-body table.dataTable.no-footer {
+  border-bottom: 0;
+}
+
+.panel-body .dataTables_info {
+  color: $medium-gray;
+  font-style: italic;
+  margin-left: 1%;
+}
+
+.panel-body .dataTables_wrapper .dataTables_processing {
+  top: 20%;
+  left: 95%;
+  width: 75px;
+  height: 75px;
+  float: none;
+  border-radius: 50%;
+  background-color: $white;
+  padding-top: 0;
+  box-shadow: 1px 8px 6px -6px #777;
+  z-index: 75;
+  content: url('../../../resources/assets/gifs/Rolling-1s-200px.gif');
+}

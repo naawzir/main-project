@@ -1,0 +1,30 @@
+version: '3'
+services:
+  webserver:
+    hostname: webserver
+    container_name: webserver
+    image: 135587954537.dkr.ecr.eu-west-1.amazonaws.com/isg-tcp-laravel:latest
+    ports:
+      - "80:80"
+      - "3306:3306"
+      - "443:443"
+    volumes:
+      - "./:/data/srv/nginx/laravel.tcp-ltd.co.uk/site"
+      - tcp_node_modules:/data/srv/nginx/laravel.tcp-ltd.co.uk/site/node_modules
+      - "tcp_mysql_data:/data/mysql"
+    working_dir: "/data/srv/nginx/laravel.tcp-ltd.co.uk/site"
+    command: >
+      /bin/bash -c "tail
+      -f /var/log/nginx/error.log
+      -f /var/log/mysql/mysql_error.log"
+  artisan:
+    image: 135587954537.dkr.ecr.eu-west-1.amazonaws.com/artisan
+    volumes:
+      - $IAMPROPERTY_ROOT/database/migrations:/laravel/database/migrations
+      - $IAMPROPERTY_ROOT/config/permission.php:/laravel/config/permission.php
+    environment:
+      DB_HOST: webserver
+      DB_PASSWORD: root
+volumes:
+  tcp_mysql_data:
+  tcp_node_modules:

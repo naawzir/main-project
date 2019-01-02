@@ -1,0 +1,59 @@
+.Feedback {
+  align-items: center;
+  display: flex;
+}
+
+.Feedback__indicator,
+.Feedback label {
+  display: inline-block;
+  margin-right: 4px;
+  text-align: center;
+  height: 60px;
+}
+
+.Feedback__indicator {
+  min-width: 60px;
+  width: auto;
+}
+
+.Feedback__indicator img {
+  display: block;
+  margin: 0 auto;
+  max-height: calc(100% - calc(1.6 * 1rem));
+}
+
+.Feedback label {
+  cursor: pointer;
+  line-height: 60px;
+  border: 2px solid #e8e8e8;
+  width: 60px;
+}
+
+.Feedback :checked + label {
+  background-color: $action;
+}
+
+.Feedback--error label {
+  border-color: rgba(137, 5, 5, 0.5);
+}
+
+.FeedbackForm__header {
+  color: $primary-dark;
+  display: block;
+  font-size: 1.125rem;
+  font-weight: bolder;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#lowScoringCustomerFeedback td {
+  text-transform:capitalize;
+  //text-align: center;
+}
+
+#lowScoringCustomerFeedback td:nth-child(2) a {
+  font-weight: $bold;
+  color: $black;
+  text-decoration:underline;
+  cursor:pointer;
+}

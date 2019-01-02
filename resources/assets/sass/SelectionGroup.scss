@@ -1,0 +1,60 @@
+$selection-group-border-width: 1px !default;
+$selection-group-border-color: #a5a5a5 !default;
+
+@mixin selection-group-button-theme($background, $border, $color: null) {
+  background-color: $background;
+  border-color: $border;
+  color: $color,
+}
+
+@mixin selection-group-theme(
+  $active-background, $active-color, $active-border: $active-background,
+  $hover-background: lighten($active-background, 7.5%), $hover-border: $active-border) {
+  .SelectionGroup__button:hover {
+    @include selection-group-button-theme($hover-background, $hover-border);
+  }
+
+  .SelectionGroup__control:checked {
+    + .SelectionGroup__button {
+      @include selection-group-button-theme($active-background, $active-border, $active-color);
+
+      &:hover {
+        @include selection-group-button-theme($active-background, $active-border, $active-color);
+      }
+    }
+  }
+}
+
+.SelectionGroup {
+  display: flex;
+
+  // Use `sr-only` to hide the input
+  .SelectionGroup__control {
+    @include sr-only;
+
+    &:checked + .SelectionGroup__button {
+      z-index: 1;
+    }
+  }
+
+  .SelectionGroup__button {
+    border-color: $selection-group-border-color;
+    border-width: $selection-group-border-width;
+    flex-grow: 1;
+    margin-right: 0;
+
+    &:not(:first-of-type) {
+      margin-left: -$selection-group-border-width;
+    }
+
+    // Reset the rounded corners
+    &:not(:first-of-type) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+    &:not(:last-of-type) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+}

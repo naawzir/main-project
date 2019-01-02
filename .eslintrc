@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": true,
+    "jquery": true,
+    "mocha": true
+  },
+  "extends": [
+    "airbnb"
+  ],
+  "rules": {
+    "spaced-comment": ["error", "always", { "markers": [":", "::"] }],
+    "no-console": ["error", { "allow": ["error", "info", "warn"] }],
+    "indent": ["error", 4],
+    "max-len": ["off"],
+    "class-methods-use-this": 0
+  },
+  "overrides": [{
+    "files": ["tests/**/*.js"],
+    "rules": {
+      "func-names": "off",
+      "no-restricted-syntax": "off",
+      "prefer-arrow-callback": "off"
+    }
+  }]
+}

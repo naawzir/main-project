@@ -1,0 +1,53 @@
+.formdiv {
+  display: inline-block;
+  float: left
+}
+
+.blocklabel {
+  display: block;
+}
+
+.blockdiv {
+  display: inline-block;
+}
+
+.biginput {
+  height: 3em;
+  width: 20em;
+  margin-bottom: 10px;
+}
+
+.medinput {
+  height: 3em;
+  width: 10em;
+  margin-bottom: 10px;
+}
+
+.rightdiv {
+  float: right;
+  padding-right: 20%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#move-right {
+  float: right;
+  padding-right: 25%;
+}
+
+.solicitor-user-section {
+  border-bottom: $medium-gray 1px solid;
+  margin-bottom: 10px;
+}
+
+.pound-symbol {
+  color: #d47f38;
+  font-weight: bolder;
+  line-height: 40px;
+}
+
+.duplicate td .cancel-button {
+  display: none;
+}

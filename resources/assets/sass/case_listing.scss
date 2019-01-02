@@ -1,0 +1,122 @@
+/* CSS for Case Listing Page */
+
+.listing-label {
+  float: left;
+  width: 120px;
+  text-align: right;
+  margin-right: 20px;
+  line-height: 35px;
+}
+
+.listing-select,
+.listing-text {
+  float: left;
+  width: 180px;
+  border: solid 2px $medium-gray;
+  border-radius: 5px;
+  padding: 3px;
+  color: $medium-gray;
+  font-style: italic;
+}
+
+.listing-select option {
+  color: $medium-gray;
+  font-style: italic;
+}
+
+#casesTable td:nth-child(3) {
+  text-transform: capitalize;
+}
+
+#casesTable tr td:nth-child(4) {
+  text-transform: capitalize;
+}
+
+#filterTypes select {
+  text-transform: capitalize;
+}
+
+#filterStatuses select {
+  text-transform: capitalize;
+}
+
+#casesTable_filter input {
+  display: none;
+}
+
+#content-area table:not(.nohighlight) td {
+  cursor: pointer;
+}
+
+#content-area table:not(.nohighlight) tr.highlight-tr,
+#content-area table:not(.nohighlight) tr:hover {
+  background-color: $primary-light;
+}
+
+aside button {
+  float: right;
+  color: $white;
+  width: 90%;
+}
+
+.close-div {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-weight: bold;
+}
+
+.datatables-listing-filter {
+  float: right;
+  display: none;
+}
+
+#resetFilters {
+  border-radius: 5px;
+  font-size: 14px;
+  display: inline-block;
+  border: 1px solid $primary-dark;
+  color: $primary-dark;
+  padding: 3px 3px 3px 3px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 3px;
+}
+
+#filterAccountManagerApplied,
+#filterStatusApplied,
+#filterAgentApplied,
+#filterTransactionApplied,
+#filterBranchApplied,
+#filterDateApplied,
+#filterMyBranchesApplied,
+#filterReferenceApplied,
+#filterMyCasesApplied {
+  font-size: 14px;
+  display: inline-block;
+  background-color: $primary-very-light;
+  border: 1px solid $primary-dark;
+  color: $primary-dark;
+  padding: 2px;
+  margin-right: 3px;
+}
+
+.filter-remove {
+  cursor: pointer;
+}
+
+#filterDateRemove, #filterMyBranchesRemove, #filterReferenceRemove {
+  cursor: pointer;
+}
+
+#documents-list {
+  font-size: small;
+}
+
+#transaction {
+  text-transform: capitalize;
+}
+
+#last_milestone {
+  color: $brand-success;
+}
